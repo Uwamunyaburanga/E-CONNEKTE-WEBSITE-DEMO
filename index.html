@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E-CONNEKTE | You need, I need — Let's Connect</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="site-header">
+  <a class="brand wordmark" href="#home" aria-label="E-CONNEKTE home">E-CONNEKTE</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav id="mainNav" class="main-nav" aria-label="Main navigation">
+    <a href="#carpool">01 <span>Carpooling</span></a>
+    <a href="#marketplace">02 <span>Used marketplace</span></a>
+    <a href="#arrival">03 <span>Arrival & Living</span></a>
+  </nav>
+  <div class="header-actions"><button class="btn btn-quiet" id="loginBtn">Log in</button><button class="btn btn-primary" id="joinBtn">Join E-CONNEKTE</button></div>
+</header>
+<main>
+<section class="hero hero-minimal" id="home">
+  <div class="hero-copy hero-centered">
+    <span class="eyebrow"><span class="eyebrow-dot"></span> A PLATFORM BUILT AROUND STUDENT NEEDS</span>
+    <h1>Make student life<br><span>easier together.</span></h1>
+    <p class="hero-text">E-CONNEKTE helps students share car journeys, buy and sell affordable second-hand items, and find practical accommodation support when moving to a new city.</p>
+    <div class="quick-start">
+      <span class="quick-label">CHOOSE WHAT YOU NEED</span>
+      <div class="quick-actions">
+        <a href="#carpool"><span class="quick-icon">01</span><span><b>Find a shared ride</b><small>Travel with students going your way</small></span><i>→</i></a>
+        <a href="#marketplace"><span class="quick-icon">02</span><span><b>Buy or sell used items</b><small>Find affordable student essentials</small></span><i>→</i></a>
+        <a href="#arrival"><span class="quick-icon">03</span><span><b>Find arrival support</b><small>Explore accommodation information</small></span><i>→</i></a>
+      </div>
+    </div>
+    <button class="text-link about-trigger" id="aboutToggle" aria-expanded="false">Who we are and why we started <span>＋</span></button>
+    <div class="about-reveal" id="aboutReveal" hidden><strong>One platform for three everyday student needs.</strong><p>Students often need affordable ways to travel, furnish a room and settle into an unfamiliar city. E-CONNEKTE is designed to connect students with one another and make those everyday tasks easier. We are developing the idea with students and local partners, and want their feedback to shape what comes next.</p></div>
+  </div>
+</section>
+<section class="servicebar" id="services"><a href="#rides">01 <b>Carpooling</b><small>Travel together ↗</small></a><a href="#market">02 <b>Used marketplace</b><small>Buy and sell ↗</small></a><a href="#arrival">03 <b>Arrival & Living</b><small>Settle in ↗</small></a></section>
+<section class="section" id="rides"><div class="heading"><div><small class="eyebrow">01 / TRAVEL TOGETHER</small><h2>Your route.<br><em>Your people.</em></h2></div><p>Going home for the weekend or travelling to another city? Find a student driver with available seats, request a place and agree on sharing the journey costs.</p></div>
+<div class="panel"><h3>Find a ride</h3><form id="rideForm" class="fields"><label>Leaving from<input id="from" placeholder="e.g. Cesena" required></label><label>Going to<input id="to" placeholder="e.g. Bologna" required></label><label>Travel date<input id="date" type="date" required></label><label>Passengers<select id="seats"><option>1</option><option>2</option><option>3</option><option>4</option></select></label><button class="primary">Search rides →</button></form><p id="rideResult" class="feedback" aria-live="polite"></p><hr><div class="offer"><span><b>Already driving?</b><small>Offer your empty seats to fellow students.</small></span><button class="outline" data-modal="offer">＋ Offer a ride</button></div></div>
+<div class="subhead"><h3>Example journeys</h3><small>Illustrative sample listings</small></div><div class="cards"><article class="ride"><div class="route"><span>●</span><b>Cesena</b><i></i><span>●</span><b>Bologna</b></div><p>Friday · 16:45 &nbsp; | &nbsp; Marco · 2 seats</p><button class="outline" data-modal="request">View ride</button></article><article class="ride"><div class="route"><span>●</span><b>Forlì</b><i></i><span>●</span><b>Rimini</b></div><p>Saturday · 08:30 &nbsp; | &nbsp; Amina · 3 seats</p><button class="outline" data-modal="request">View ride</button></article></div><small class="note">Carpooling must be designed around genuine cost-sharing and applicable Italian transport and insurance rules. These are demo journeys, not real offers.</small></section>
+<section class="tint"><div class="section" id="market"><div class="heading"><div><small class="eyebrow">02 / GIVE THINGS A SECOND LIFE</small><h2>Good finds.<br><em>Better prices.</em></h2></div><p>Browse furniture, electronics, bicycles and household essentials listed by students nearby. Sell items you no longer need when you move.</p></div>
+<div class="toolbar"><div id="filters"><button class="filter active" data-cat="All">All items</button><button class="filter" data-cat="Furniture">Furniture</button><button class="filter" data-cat="Electronics">Electronics</button><button class="filter" data-cat="Bicycles">Bicycles</button><button class="filter" data-cat="Home">Home</button></div><button class="primary" data-modal="sell">＋ Sell an item</button></div>
+<div class="products"><article data-category="Furniture"><div class="photo blue">🪑<small>Furniture</small><button class="save">♡</button></div><h3>Study desk <b>€35</b></h3><p>Good condition · Cesena</p><button class="contact" data-modal="contact">Contact seller →</button></article><article data-category="Electronics"><div class="photo mint">🎧<small>Electronics</small><button class="save">♡</button></div><h3>Wireless headphones <b>€25</b></h3><p>Very good · Forlì</p><button class="contact" data-modal="contact">Contact seller →</button></article><article data-category="Bicycles"><div class="photo sand">🚲<small>Bicycles</small><button class="save">♡</button></div><h3>City bicycle <b>€60</b></h3><p>Used · Bologna</p><button class="contact" data-modal="contact">Contact seller →</button></article><article data-category="Home"><div class="photo lilac">🍳<small>Home</small><button class="save">♡</button></div><h3>Kitchen starter set <b>€18</b></h3><p>Like new · Cesena</p><button class="contact" data-modal="contact">Contact seller →</button></article></div><small class="note">Sample products only. Real listings need user accounts, moderation and safe transaction/contact processes.</small></div></section>
+<section class="section" id="arrival"><div class="heading"><div><small class="eyebrow">03 / MAKE YOURSELF AT HOME</small><h2>A new city.<br><em>A smoother start.</em></h2></div><p>Moving somewhere new can feel like a lot. Find accommodation information, practical checklists and helpful local connections in one place.</p></div>
+<div class="arrival"><article><div class="emoji">🏡</div><small class="eyebrow">FIND A PLACE</small><h3>Explore accommodation</h3><p>Browse housing opportunities and prepare the right questions before contacting a provider.</p><button class="primary" data-modal="housing">Explore housing →</button></article><article><div class="emoji">🧳</div><small class="eyebrow">GET READY</small><h3>Your arrival checklist</h3><p>Useful first steps when settling into a new city:</p><ul><li>Confirm your accommodation</li><li>Plan your route from the station</li><li>Prepare essential documents</li><li>Find nearby shops and services</li></ul><button class="contact" data-modal="checklist">Open checklist →</button></article><article><div class="emoji">🤝</div><small class="eyebrow">CONNECT LOCALLY</small><h3>Ask the community</h3><p>Connect with students who already know the city and can share practical advice.</p><button class="outline" data-modal="community">Find local connections →</button></article></div></section>
+<section class="cta"><div><small>ONE COMMUNITY, THREE USEFUL SERVICES</small><h2>Make student life easier,<br>together.</h2><p>Start with one connection. Discover what becomes possible when students help students.</p></div><button class="light" data-modal="join">Join the community →</button></section>
+</main><footer><a class="logo" href="#home"><b>E</b> E-CONNEKTE</a><span>You need, I need — Let's Connect!</span><small>© <span id="year"></span> E-CONNEKTE · Front-end concept prototype</small></footer>
+<dialog id="modal"><form method="dialog" class="close"><button aria-label="Close">×</button></form><div id="modalBody"></div></dialog><script src="script.js"></script></body></html>
